@@ -634,6 +634,19 @@ input[type=range].ctl{width:100%; accent-color:var(--champagne); height:28px; cu
   .stat-grid{grid-template-columns:minmax(0,1fr)}
 }
 
+/* ---------- the silent thief (founder's teaching, 2026-11-04) ---------- */
+.thief-eq{display:grid; grid-template-columns:1fr auto 1fr auto 1.25fr; gap:14px; align-items:stretch; margin-top:6px}
+.thief-op{font-family:var(--font-display); font-size:30px; color:var(--champagne-2); align-self:center; padding:0 2px}
+.thief-bad{border-color:rgba(227,154,139,.45)}
+.thief-real{color:#E39A8B}
+@media (max-width:1080px){
+  .thief-eq{grid-template-columns:1fr auto 1fr auto 1.25fr}
+}
+@media (max-width:640px){
+  .thief-eq{grid-template-columns:1fr; gap:10px}
+  .thief-op{justify-self:center; padding:0}
+}
+
 </style>
 </head>
 <body>
@@ -1013,6 +1026,39 @@ input[type=range].ctl{width:100%; accent-color:var(--champagne); height:28px; cu
     </div>
   </section>
 
+  <!-- THE SILENT THIEF — the founder's teaching -->
+  <section class="band scene" id="thief" aria-labelledby="thiefH">
+    <div class="wrap">
+      <div class="band-head">
+        <p class="kicker">The Silent Thief</p>
+        <h2 id="thiefH">Money that sleeps is money leaking.</h2>
+        <p>Nobody steals it in the night. It leaves in daylight, a fraction at a time, out of the accounts nobody is watching — because money that is not working is still charged rent. The rent is called inflation, and around here it has a name: <strong class="ivory2">the silent thief</strong>. No statement ever prints his line. He takes his cut from what your money can <em>buy</em>, and the balance — the number everyone watches — keeps smiling.</p>
+      </div>
+      <div class="mkt-grid" role="list" aria-label="Where money sleeps">
+        <div class="mkt-tile" role="listitem"><div class="mn">Checking</div><p class="small ivory2 mt8">Everyday money, sleeping at nearly nothing while prices climb past it.</p></div>
+        <div class="mkt-tile" role="listitem"><div class="mn">Savings</div><p class="small ivory2 mt8">The “safe” account — safe from everything except the thief, who is already inside.</p></div>
+        <div class="mkt-tile" role="listitem"><div class="mn">CDs</div><p class="small ivory2 mt8">Locked up for a year or more — and the lock does not stop the leak.</p></div>
+        <div class="mkt-tile" role="listitem"><div class="mn">IRAs</div><p class="small ivory2 mt8">Retirement accounts that stopped working — cash sitting inside a working account’s clothes.</p></div>
+      </div>
+      <div class="card mt24">
+        <div class="flex mb16"><h3 style="font-size:19px">The arithmetic nobody shows you</h3><span class="grow"></span><span class="chip chip-review"><span class="ic" aria-hidden="true">◐</span> Example figures</span></div>
+        <div class="thief-eq" role="img" aria-label="Example: inflation takes 5.00 percent a year, your bank pays 1.75 percent, so your money's real return is minus 3.25 percent a year">
+          <div class="tool-stat"><div class="sl2">Inflation takes</div><div class="sv3">5.00%</div><div class="small muted">a year, every year — the silent thief’s cut (example)</div></div>
+          <div class="thief-op" aria-hidden="true">−</div>
+          <div class="tool-stat"><div class="sl2">Your bank pays</div><div class="sv3">1.75%</div><div class="small muted">the rate on the sleeping account (example)</div></div>
+          <div class="thief-op" aria-hidden="true">=</div>
+          <div class="tool-stat thief-bad"><div class="sl2">Your money’s real return</div><div class="sv3 thief-real">−3.25%</div><div class="small muted">a year — you are actually losing money (example)</div></div>
+        </div>
+        <p class="mt16">Say it on $10,000, because percentages hide what dollars confess: the bank adds $175 and the balance grows to $10,175 — while <strong class="ivory2">$325 of what that money can buy quietly leaves</strong>. The statement shows the first line and never the second. If inflation is 5% and you are getting 1.75% from your bank, you are actually losing money. <span class="muted">(Example figures — your accounts will carry their own rates; the shape of the arithmetic does not change.)</span></p>
+      </div>
+      <div class="verdict verdict-wait mt24"><span class="vi" aria-hidden="true">⌕</span><p><strong>Wolf’s job is the hunt.</strong> He reads where your money sleeps — checking, savings, CDs, IRAs that stopped working — prices the leak account by account, and shows you the choice: what could move, where it could go, and what it would cost. Then he waits for your word. <strong class="ivory2">He never moves money, trades money, or makes money for you, or executes anything without your permission.</strong></p></div>
+      <div class="flex mt16">
+        <button class="btn btn-gold" data-open-workspace data-ws-target="thief" type="button">Run your own figures — the Silent Thief calculator</button>
+        <button class="btn btn-ghost" data-open-workspace data-ws-target="leaks" type="button">See the hunt — the Leak Finder</button>
+      </div>
+    </div>
+  </section>
+
 <!-- EVIDENCE -->
   <section class="band scene" id="evidence" aria-labelledby="evH">
     <div class="wrap">
@@ -1101,7 +1147,7 @@ input[type=range].ctl{width:100%; accent-color:var(--champagne); height:28px; cu
       <div class="band-head">
         <p class="kicker">The Film</p>
         <h2 id="filmH">Covenant, in twenty-five seconds.</h2>
-        <p>The film, letterboxed as it was made. Beside it, the journey’s seven beats — choose one and the guided demonstration reopens at that step, so you can walk the moment yourself.</p>
+        <p>The film, letterboxed as it was made. Beside it, the journey’s beats — the film’s seven, plus the one its voice now teaches — choose one and the guided demonstration reopens at that step, so you can walk the moment yourself.</p>
       </div>
       <div class="film-grid">
         <figure class="film-frame" aria-label="The Covenant film — second showing">
@@ -1117,7 +1163,7 @@ input[type=range].ctl{width:100%; accent-color:var(--champagne); height:28px; cu
           <figcaption class="film-cap"><span><b>Covenant</b> — the film</span><span>Concept preview · Simulated data</span></figcaption>
         </figure>
         <div>
-          <h3 style="font-size:19px" class="mb16">The seven beats — open the demo at any step</h3>
+          <h3 style="font-size:19px" class="mb16">The beats — open the demo at any step</h3>
           <div class="chapter-list" role="list" aria-label="Demonstration chapters">
             <button class="chapter" type="button" data-chapter="0" role="listitem"><span class="n">01</span><span><span class="t">Meet Wolf</span><span class="d" style="display:block">Arrival — a companion, not a dashboard.</span></span></button>
             <button class="chapter" type="button" data-chapter="1" role="listitem"><span class="n">02</span><span><span class="t">Choose a goal</span><span class="d" style="display:block">The plan reshapes itself around what you pick.</span></span></button>
@@ -1126,6 +1172,7 @@ input[type=range].ctl{width:100%; accent-color:var(--champagne); height:28px; cu
             <button class="chapter" type="button" data-chapter="4" role="listitem"><span class="n">05</span><span><span class="t">Run a simulation</span><span class="d" style="display:block">One plan waits — on purpose — and says why.</span></span></button>
             <button class="chapter" type="button" data-chapter="5" role="listitem"><span class="n">06</span><span><span class="t">Inspect the receipt</span><span class="d" style="display:block">Submitted, filled, settled — three different words.</span></span></button>
             <button class="chapter" type="button" data-chapter="6" role="listitem"><span class="n">07</span><span><span class="t">See what Wolf learned</span><span class="d" style="display:block">One lesson accepted. One rejected. Both on the record.</span></span></button>
+            <button class="chapter" type="button" data-chapter="3" role="listitem"><span class="n">08</span><span><span class="t">The Silent Thief</span><span class="d" style="display:block">The beat the voice now teaches: money that sleeps is money leaking — inflation takes 5.00%, the bank pays 1.75% (example figures). Opens the demo at the evidence.</span></span></button>
           </div>
         </div>
       </div>
@@ -1373,7 +1420,8 @@ const S = {
   leaksScanned: false, leaksPrepared: {},
   simM: 310, simN: 12, simRisk: 1,
   mbLoss: 25, mbNotional: 5000, mbBuffer: 250,
-  briefDone: {}
+  briefDone: {},
+  thiefBal: 10000, thiefRate: 1.75, thiefInf: 5
 };
 
 /* ---------- toast ---------- */
@@ -1633,7 +1681,8 @@ const demoPanes = [
   <h3>Scene 4 · Review a plan</h3>
   <p class="lede">${S.wolfName} presents the plan your goal produced — with its evidence, its expiry and its checks — before anything runs. You are reading what he would do, not what he did.</p>
   ${planCardHTML()}
-  <div class="verdict verdict-pass"><span class="vi" aria-hidden="true">✓</span><p><strong>Review checks pass.</strong> Permission: inside mandate v${S.mandateVersion}. Freshness: fixture data labeled simulated. Liquidity: obligations fenced first. This plan expires 24 hours after review (sample) and must be re-checked if anything material changes before it runs.</p></div>` },
+  <div class="verdict verdict-pass"><span class="vi" aria-hidden="true">✓</span><p><strong>Review checks pass.</strong> Permission: inside mandate v${S.mandateVersion}. Freshness: fixture data labeled simulated. Liquidity: obligations fenced first. This plan expires 24 hours after review (sample) and must be re-checked if anything material changes before it runs.</p></div>
+  <div class="verdict verdict-wait" style="margin-top:16px"><span class="vi" aria-hidden="true">◐</span><p><strong>First, the hunt where money sleeps.</strong> Before this plan, ${S.wolfName} swept the accounts in the Leak Finder — checking, savings, a CD, and cash inside an IRA (fixture rows) — and flagged each balance the silent thief is beating: money paying 1.75% while inflation takes 5.00% (example figures) loses ground quietly, every year. Those leaks are why the plan starts at home. Every figure from the hunt is <strong>potential</strong>, never “recovered,” and nothing it finds moves without the customer’s word.</p></div>` },
 { label:"Run a simulation", html: () => `
   <h3>Scenes 5–6 · Run a simulation — including the one that must fail</h3>
   <p class="lede">Two paper plans. One is sound. One would leave too little liquid cash before rent — watch what an honest agent does with it.</p>
@@ -1834,6 +1883,23 @@ function simFV(start, m, n, annual){
 }
 const SIM_RATES = [0, 0.03, 0.06];
 const SIM_RATE_NAMES = ["Cash only · 0%", "Balanced · 3%/yr", "Growth-leaning · 6%/yr"];
+/* ---------- the silent thief: where money sleeps (fixture accounts) ---------- */
+const THIEF_INF = 5.00;
+const ACCOUNTS = [
+  { where:"Checking · First Sample Bank", bal:8400, rate:0.05, note:"Everyday money, sleeping at nearly nothing" },
+  { where:"Savings · Sample Savings", bal:12750, rate:1.75, note:"The founder’s example rate, against 5.00% inflation" },
+  { where:"CD · 12-month, Sample Bank", bal:10000, rate:2.10, note:"Locked for a year — and still behind inflation" },
+  { where:"IRA · cash sweep, Sample Brokerage", bal:6300, rate:0.40, note:"Cash inside the IRA, waiting for instructions" }
+];
+function acctReal(a){ return a.rate - THIEF_INF; }
+function acctLeak(a){ return a.bal * Math.max(0, THIEF_INF - a.rate) / 100; }
+function acctLeakTotal(){ return ACCOUNTS.reduce((s,a)=>s+Math.round(acctLeak(a)*100)/100,0); }
+function fmtPct(v){ return (v<0?"−":v>0?"+":"") + Math.abs(v).toFixed(2) + "%"; }
+function fmtMoney(v){ return "$" + v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+function acctSummaryHTML(){
+  const tot = acctLeakTotal();
+  return `<div class="verdict verdict-wait"><span class="vi" aria-hidden="true">◐</span><p><strong>The hunt found the thief at work — ${fmtMoney(tot)} a year</strong> of purchasing power leaving these four fixture accounts combined, at the example inflation of ${THIEF_INF.toFixed(2)}%. Every figure is <strong>potential, not recovered</strong>: nothing is saved until money actually moves — with the customer’s permission, after review — and a later statement verifies the new rate. Until then the leak is a finding, printed so it can be judged.</p></div>`;
+}
 
 
 const WS = [
@@ -2020,7 +2086,41 @@ const WS = [
     </tbody></table></div>
     <div id="leakSummary" class="mt16">${S.leaksScanned ? leakSummaryHTML() : '<p class="small muted">Run the scan to see what the fixture hides. Nothing here is charged, cancelled, or contacted — the scan reads a sample statement and reports.</p>'}</div>
   </div>
+
+  <div class="card mb24">
+    <div class="flex mb16"><h3 style="font-size:19px">Where money sleeps — the silent thief’s table</h3><span class="grow"></span><span class="chip chip-review"><span class="ic" aria-hidden="true">◐</span> Fixture inflation ${THIEF_INF.toFixed(2)}% · example</span></div>
+    <p class="small muted mb16">The second hunt: balances that stopped working. A balance only keeps its power if its rate beats inflation — below that line, the silent thief is taking the difference every year, and no statement prints his line.</p>
+    <div class="tbl-wrap"><table class="data"><thead><tr><th>Account (fixture)</th><th>Balance</th><th>Pays</th><th>Real return</th><th>Yearly leak</th><th>Finding</th></tr></thead><tbody>
+    ${ACCOUNTS.map(a=>`<tr>
+      <td><strong>${a.where}</strong><div class="small muted">${a.note}</div></td><td>$${a.bal.toLocaleString("en-US")}</td><td>${a.rate.toFixed(2)}%</td>
+      <td>${S.leaksScanned ? fmtPct(acctReal(a)) : '<span class="small muted">—</span>'}</td>
+      <td>${S.leaksScanned ? fmtMoney(acctLeak(a)) : '<span class="small muted">—</span>'}</td>
+      <td>${S.leaksScanned ? '◐ Losing ground — the silent thief is ahead of this rate' : '<span class="small muted">Not scanned yet</span>'}</td>
+    </tr>`).join("")}
+    </tbody></table></div>
+    <div id="acctSummary" class="mt16">${S.leaksScanned ? acctSummaryHTML() : '<p class="small muted">Run the scan above and the hunt prices the leak on each sleeping balance. Run your own figures — any balance, any rate — in the Silent Thief calculator.</p>'}</div>
+  </div>
   <p class="small muted">How a finding becomes money: it doesn’t, until a later statement verifies the charge is gone. Until then every figure here is <strong class="ivory2">potential savings</strong> — the word this product uses on purpose.</p>` },
+{ id:"thief", icon:"◐", label:"Silent Thief", html: () => `
+  <div class="ws-head"><div><h2>Silent Thief Calculator</h2><p class="sub">The founder’s arithmetic, on your own figures: what inflation quietly takes from money that sleeps — run it the way ${S.wolfName} runs the hunt</p></div>
+  <div class="spacer"></div>${CH.sim("Simulated tool")}</div>
+
+  <div class="card mb24">
+    <h3 style="font-size:19px">Money that sleeps, priced honestly</h3>
+    <p class="small muted mb16">Every figure here is an <strong class="ivory2">example</strong> — preset to the founder’s example (a bank paying 1.75% while inflation takes 5.00%). Move the sliders; the leak answers in dollars, because percentages hide what dollars confess.</p>
+    <div class="slider-row"><label for="thiefBal">Balance asleep</label><input type="range" class="ctl" id="thiefBal" min="500" max="100000" step="250" value="${S.thiefBal}" aria-describedby="thiefBalV"><span class="sv2" id="thiefBalV">$${S.thiefBal.toLocaleString("en-US")}</span></div>
+    <div class="slider-row"><label for="thiefRate">Your bank pays</label><input type="range" class="ctl" id="thiefRate" min="0" max="8" step="0.05" value="${S.thiefRate}" aria-describedby="thiefRateV"><span class="sv2" id="thiefRateV">${S.thiefRate.toFixed(2)}%</span></div>
+    <div class="slider-row"><label for="thiefInf">Inflation takes</label><input type="range" class="ctl" id="thiefInf" min="0" max="10" step="0.05" value="${S.thiefInf}" aria-describedby="thiefInfV"><span class="sv2" id="thiefInfV">${S.thiefInf.toFixed(2)}%</span></div>
+    <div class="tool-band">
+      <div class="tool-stat"><div class="sl2">Real return · bank − inflation</div><div class="sv3" id="thiefReal">$—</div></div>
+      <div class="tool-stat"><div class="sl2">The leak · one year</div><div class="sv3" id="thiefYear">$—</div></div>
+      <div class="tool-stat"><div class="sl2">The leak · five years of purchasing power</div><div class="sv3" id="thief5">$—</div></div>
+    </div>
+    <p class="mt16" id="thiefVerdict" aria-live="polite"></p>
+    <div class="hairline"></div>
+    <p class="small ivory2"><strong>Not a promise.</strong> This is arithmetic on example numbers — not a forecast, not a quote from any bank, and not a return anyone has promised you. It prices a leak; it does not move a dollar. Moving money is a reviewed act that begins with your word, never with a slider.</p>
+  </div>
+  <p class="small muted">The same arithmetic runs across the fixture accounts in the Leak Finder — checking, savings, a CD, and cash inside an IRA — where ${S.wolfName} flags each balance the thief is beating. Findings there are <strong class="ivory2">potential</strong>, never “recovered,” until a statement verifies a change you approved.</p>` },
 { id:"research", icon:"☰", label:"Research", html: () => `
   <div class="ws-head"><div><h2>Research</h2><p class="sub">Source-linked notes · publication time and event time shown separately · quotes distinguished from synthesis</p></div></div>
   <div class="card mb24" id="wsWatchPanel">
@@ -2531,6 +2631,31 @@ function wireWorkspace(){
     }
   });
   if($("#simMonthly")) simCalc();
+  const thiefCalc = ()=>{
+    const bal = S.thiefBal, rate = S.thiefRate, inf = S.thiefInf;
+    const real = rate - inf;
+    const leakY = bal * Math.max(0, inf - rate) / 100;
+    const leak5 = bal - bal * Math.pow((1 + rate / 100) / (1 + inf / 100), 5);
+    $("#thiefReal").textContent = fmtPct(real);
+    $("#thiefYear").textContent = fmtMoney(Math.max(0, leakY));
+    $("#thief5").textContent = leak5 > 0 ? fmtMoney(leak5) : (leak5 < 0 ? "ahead by " + fmtMoney(-leak5) : "$0.00");
+    $("#thiefBalV").textContent = "$" + bal.toLocaleString("en-US");
+    $("#thiefRateV").textContent = rate.toFixed(2) + "%";
+    $("#thiefInfV").textContent = inf.toFixed(2) + "%";
+    const vd = $("#thiefVerdict");
+    if(inf > rate) vd.innerHTML = "On these example figures the thief takes <strong class='ivory2'>" + fmtMoney(leakY) + " of purchasing power in one year</strong> — the balance still grows by what the bank pays; what it buys quietly shrinks. That gap is the whole finding, and it is <strong class='ivory2'>potential</strong>, not recovered: closing it starts with your decision, never with this tool.";
+    else if(rate > inf) vd.innerHTML = "On these example figures the account is <strong class='ivory2'>outrunning the thief</strong> — its rate beats inflation by " + fmtPct(real).replace("+", "") + ", so purchasing power grows instead of leaking. The hunt moves on to the next sleeping balance.";
+    else vd.innerHTML = "On these example figures the account is <strong class='ivory2'>exactly keeping pace</strong> — purchasing power neither grows nor leaks. The thief takes nothing, and adds nothing either.";
+  };
+  ["thiefBal","thiefRate","thiefInf"].forEach(id=>{
+    const el = document.getElementById(id);
+    if(el && !el.dataset.wired){ el.dataset.wired = "1";
+      el.addEventListener("input", ()=>{
+        S.thiefBal = +$("#thiefBal").value; S.thiefRate = +$("#thiefRate").value; S.thiefInf = +$("#thiefInf").value; thiefCalc();
+      });
+    }
+  });
+  if($("#thiefBal")) thiefCalc();
   ["mbLoss","mbNotional","mbBuffer"].forEach(id=>{
     const el = document.getElementById(id);
     if(el && !el.dataset.wired){ el.dataset.wired = "1";
@@ -2789,6 +2914,8 @@ function wolfReply(raw){
              sys: "**Concept panel — Talk to a human.** In the live product, this opens a handoff to the Covenant team: with your consent, a person sees this conversation's context and I step back. In this concept preview the handoff is a labeled mock — no message is sent, and no data leaves this page." };
   if(S.paused && has("run", "start", "execute", "buy", "trade", "place"))
     return { text: "I won't — you paused me, and that state has a name: **WOLF_PAUSED_BY_CUSTOMER**. While you hold the pause, I start nothing new, anywhere in this demo. Existing paper positions stay visible and accounted for. Resume from the bar above the demonstration or from the workspace, and I will work again — inside the same limits, never wider ones." };
+  if(has("silent thief", "inflation", "losing money", "stale money", "money leaks", "leaking", "purchasing power", "losing value", "money that sleeps", "money sleeps"))
+    return { text: "The silent thief is **inflation** — the leak in money that sleeps.\nHere is the worked example, example figures and labeled as such: inflation takes **5.00%** a year, the bank pays **1.75%**, so your money's real return is **−3.25% a year**. On $10,000 that is **$325 of purchasing power gone in one year** — silently. The balance still grows by what the bank pays. What it buys quietly shrinks, and no statement ever prints the second line.\nWhere I hunt it: checking, savings, CDs, and IRAs that stopped working — the account rows in the Leak Finder, and the **Silent Thief calculator** beside it runs this same arithmetic on your own figures. What I find is **potential**, never “recovered,” until you decide it should move.\nThe boundary, in the founder's own words: **He never moves money, trades money, or makes money for you, or executes anything without your permission.**" };
   if(has("cost", "fee", "charge me", "price of covenant", "pricing"))
     return { text: "Every cost, printed: the plan wordings on this page are the truth of them — **'Software license — pricing under review'** and **'Business / advisor integration — proposed.'** No checkout exists in this preview, and nothing is charged.\nThe standing rule from the Plans page: taxes are not the only expense — provider, data, and account costs are printed next to any figure they touch, never in a footnote's shadow." };
   if(has("live price", "price of", "how much is", "quote", "current price", "trading at"))
@@ -2823,7 +2950,7 @@ function chatHTML(){
   return `<div class="chat-head"><span class="ct">Talk to <span data-wolf-name>${S.wolfName}</span></span><span class="grow"></span><span class="chip chip-sim"><span class="ic" aria-hidden="true">◈</span> Simulated conversation — concept preview</span><button class="btn btn-gold btn-sm" type="button" data-call-open>📞 Call Wolf</button></div>` +
   `<div class="chat-log" data-chat-log aria-live="polite"></div>` +
   `<div class="chat-chips" role="group" aria-label="Try the hard questions">` +
-    ["Guarantee me a return", "Just raise my limit", "What's the live price of…?", "Show me a receipt", "Talk to a human"]
+    ["Guarantee me a return", "Just raise my limit", "What's the live price of…?", "Show me a receipt", "What's the silent thief?", "Talk to a human"]
       .map(c => `<button class="chat-chip" type="button" data-chip-text="${c}">${c}</button>`).join("") +
   `</div>` +
   `<form class="chat-form" data-chat-form><input type="text" data-chat-input maxlength="240" autocomplete="off" placeholder="Ask ${S.wolfName} anything — simulated answers" aria-label="Ask Wolf"><button class="btn btn-gold btn-sm" type="submit">Send</button></form>` +
@@ -2863,7 +2990,7 @@ if(wsChatLaunch && wsChat) wsChatLaunch.addEventListener("click", ()=>{
    SAYS SO on its face — never a silent failure.
    ============================================================ */
 const CALL_GREETING = "This is Wolf. I watch the markets so you don't have to — what would you like to look at?";
-const CALL_ASKS = ["Guarantee me a return", "Just raise my limit", "What's the live price of…?", "Show me a receipt", "Help me plan a reserve"];
+const CALL_ASKS = ["Guarantee me a return", "Just raise my limit", "What's the live price of…?", "Show me a receipt", "What's the silent thief?", "Help me plan a reserve"];
 window.__wolfSpoken = window.__wolfSpoken || [];
 let callOrigin = null, callTickInt = null, callRingTimeout = null, callStart = 0, callLines = [], callVoiceMode = "device";
 const callScreen = (function(){
